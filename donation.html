@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html lang="de">
-   <header>
+   <head>
+    <title>Spenden</title>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header class="d-flex justify-content-end py-3">
     <nav>
-        <ul>
-            <li>
+        <ul class="nav">
+            <li class="nav-item">
                 <form>
-                    <input type="text" name="suche" placeholder="Suche">
+                    <input type="search" class="form-control" name="suche" placeholder="Suche">
                 </form>
             </li>
-            <li><a href="index.html">Homepage</li>
-            <li><a href="donation.html">Spenden</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-            <li><a href="about.html">Über uns</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
         </ul>
     </nav>
-     <title>Kleiderspenden-Registration</title>
-   </header>
-   <body>
-    <section>
-        <h1>Spenden sind jederzeit Willkommen</h1>
-        <p>
-            Die Spenden werden verwendet um Transport zu bezahlen und um Menschen zusätzlich finanziell zu unterstützen.
+ </header>
+   <main class="d-flex">
+    <nav class="d-flex flex-shrink-0 p-2" style="width: 200px;">
+        <ul class="nav mb-auto">
+            <li class="nav-item"><a class="nav-link text-dark" href="index.html">Homepage</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="donation.html">Spenden</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="about.html">Über uns </a></li>
+        </ul>
+    </nav>
+    <div class="me-3">
+    <section class="list-group">
+        <h1 class="list-group-item mb-0 bg-primary">Hier können Sie spenden!</h1>
+        <p class="list-group-item bg-info">
+            Sie entscheiden wo ihre spende hin soll.
         </p>
     </section>
-   </body>
+        <section class="list-group">
+        <h2 class="list-group-item mb-0"> Spende vor Ort abgeben</h2>
+        <p class="list-group-item">
+            Gerne können Sie ihre spende bei uns vor ort abgeben.
+        </p>
+    </section>
+    <section class="list-group">
+        <h2 class="list-group-item mb-0"> Spende abholen lassen</h2>
+        <p class="list-group-item">
+           Wir holen gerne ihre Spende ab
+        </p>
+    </section>
+</div>
+</main>
+   <footer class="d-flex justify-content-end py-3 my-4 border-top">
+        <ul class="nav">
+           <li class="nav-item"><a class="nav-link" href="privacy.html">Datenschutz</a></li>
+           <li class="nav-item"><a class="nav-link" href="imprint.html">Impressum</a></li>
+        </ul>
+   </footer>
+</body>
 </html>
