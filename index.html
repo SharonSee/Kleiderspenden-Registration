@@ -2,77 +2,61 @@
 <html lang="de">
    <head>
     <title>Kleiderspenden-Registration</title>
-    <style type="text/css">
-        p {color: rebeccapurple;
-        font-size: larger;}
-        h1{
-            font-size: xx-large;
-            background-color: darkslateblue;
-            padding:1em;
-            border:5px;
-            text-decoration: underline;
-        }
-        h1,h2 {color:deeppink;}
-        h2{font-size: x-large;}
-        a{
-            font-size: larger;
-            text-decoration:wavy;
-            color:magenta;
-            margin: 20px;
-        }
-    </style>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <header>
+    <header class="d-flex justify-content-end py-3">
     <nav>
-        <ul>
-            <li>
+        <ul class="nav">
+            <li class="nav-item">
                 <form>
-                    <input type="text" name="suche" placeholder="Suche">
+                    <input type="search" class="form-control" name="suche" placeholder="Suche">
                 </form>
             </li>
-            <li><a href="contact.html">Kontakt</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
         </ul>
     </nav>
  </header>
-   <main>
-    <nav>
-        <ul>
-            <li><a href="index.html">Homepage</b></li>
-            <li><a href="donation.html">Spenden</a></li>
-            <li><a href="about.html">Über uns</a></li>
+   <main class="d-flex">
+    <nav class="d-flex flex-shrink-0 p-2" style="width: 200px;">
+        <ul class="nav mb-auto">
+            <li class="nav-item"><a class="nav-link text-dark" href="index.html">Homepage</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="donation.html">Spenden</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="about.html">Über uns </a></li>
         </ul>
     </nav>
-    <section>
-        <h1>Willkommen auf der Homepage der Kleiderspenden Registration</h1>
-        <p>
+    <div class="me-3">
+    <section class="list-group">
+        <h1 class="list-group-item mb-0 bg-primary">Willkommen auf der Homepage der Kleiderspenden Registration</h1>
+        <p class="list-group-item bg-info">
             Wir holen ihre Spenden ab. Sie entscheiden wann wir sie holen und wo sie hingehen soll!
         </p>
     </section>
-        <section>
-        <h2> Unsere Preise</h2>
-        <p>
+        <section class="list-group">
+        <h2 class="list-group-item mb-0"> Unsere Preise</h2>
+        <p class="list-group-item">
             Aus Kostengründen und organisatorischen Gründen können wir spenden erst ab 2 Blauen Säcken abholen. Ich bitte um Verständnis.
             Die Abhol gebühr ist unabhängig von der Menge und beträgt stets 5€. Lieferung der Spende an ihr bestimmungsort ist für sie Kostenlos da wir mit Kooperationen arbeiten.
             Über eine Spende würden wir uns dennoch freuen.
         </p>
     </section>
-    <section>
-        <h2> Unsere Leistungen</h2>
-        <p>
+    <section class="list-group">
+        <h2 class="list-group-item mb-0"> Unsere Leistungen</h2>
+        <p class="list-group-item">
             Sie können gerne ihre Spende direkt bei uns abgeben. Wie sie uns finden sehen sie bei der Rubrik Über uns. 
             Wir holen aber auch gerne ihre Spende im Umkreis von 50km ab und sie Entscheiden dann wo ihre Spende hingehen soll. 
             Sie haben die Wahl zwischen 5 verschiedenen Gebieten wo ihre Spenden dringend gebraucht werden.
         </p>
     </section>
+</div>
 </main>
-   <footer>
-    <nav>
-        <ul>
-           <a><li class="d-inline"><a href="privacy.html">Datenschutz</a></li>
-            <a><li class="d-inline"><a href="imprint.html">Impressum</a></li>
+   <footer class="d-flex justify-content-end py-3 my-4 border-top">
+        <ul class="nav">
+           <li class="nav-item"><a class="nav-link" href="privacy.html">Datenschutz</a></li>
+           <li class="nav-item"><a class="nav-link" href="imprint.html">Impressum</a></li>
         </ul>
-    </nav>
    </footer>
 </body>
 </html>
