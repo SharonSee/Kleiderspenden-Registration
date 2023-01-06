@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
-   <header>
+   <head>
+    <title>Kleiderspenden-Registration</title>
     <style type="text/css">
         p {color: rebeccapurple;
         font-size: larger;}
@@ -9,10 +10,20 @@
             background-color: darkslateblue;
             padding:1em;
             border:5px;
+            text-decoration: underline;
         }
         h1,h2 {color:deeppink;}
         h2{font-size: x-large;}
+        a{
+            font-size: larger;
+            text-decoration:wavy;
+            color:magenta;
+            margin: 20px;
+        }
     </style>
+</head>
+<body>
+    <header>
     <nav>
         <ul>
             <li>
@@ -20,17 +31,16 @@
                     <input type="text" name="suche" placeholder="Suche">
                 </form>
             </li>
-            <li><a href="index.html">Homepage</li>
+            <li><a href="index.html">Homepage</b></li>
             <li><a href="donation.html">Spenden</a></li>
             <li><a href="contact.html">Kontakt</a></li>
             <li><a href="about.html">Über uns</a></li>
         </ul>
     </nav>
-     <title>Kleiderspenden-Registration</title>
-     <h1>Willkommen auf der Homepage der Kleiderspenden Registration</h1>
-   </header>
-   <body>
+</header>
+   <main>
     <section>
+        <h1>Willkommen auf der Homepage der Kleiderspenden Registration</h1>
         <p>
             Wir holen ihre Spenden ab. Sie entscheiden wann wir sie holen und wo sie hingehen soll!
         </p>
@@ -47,13 +57,12 @@
             Sie haben die Wahl zwischen 5 verschiedenen Gebieten wo ihre Spenden dringend gebraucht werden.
         </p>
     </section>
-    
-   </body>
+</main>
    <footer>
     <nav>
-        <ul>
-            <li><a href="privacy.html">Datenschutz</a></li>
-            <li><a href="imprint.html">Impressum</a></li>
+        <ul class="text-center">
+           <a><li class="d-inline"><a href="privacy.html">Datenschutz</a></li>
+            <a><li class="d-inline"><a href="imprint.html">Impressum</a></li>
         </ul>
     </nav>
    </footer>
