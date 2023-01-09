@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+   <head>
+    <title>Abgabe Registration</title>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        a:hover {
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        function send() {
+            alert("Erfolgreich Registriert")
+            print(name,email,date,time,number)
+        }
+    </script>
+</head>
+<body style="background: aqua;">
+    <header class="d-flex justify-content-end py-3">
+    <nav>
+        <ul class="nav">
+            <li class="nav-item">
+                <form>
+                    <input type="search" class="form-control" name="suche" placeholder="Suche">
+                </form>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+        </ul>
+    </nav>
+ </header>
+   <main class="d-flex">
+    <nav class="d-flex flex-shrink-0 p-2" style="width: 200px; font-size: larger;">
+        <ul class="nav mb-auto" style="background: dodgerblue;">
+            <li class="nav-item"><a class="nav-link text-dark" href="index.html">Homepage</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="donation.html">Spenden</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="about.html">Über uns </a></li>
+        </ul>
+    </nav>
+    <div class="me-3">
+    <section class="list-group">
+        <h1 class="list-group-item mb-0" style="background: royalblue;">Registration zur Abgabe der Spende vor Ort</h1>
+        <p class="list-group-item" style="background: cornflowerblue;">
+            Bitte geben Sie die erforderlichen Daten zur Registrierung ein.
+        </p>
+    </section>
+        <section class="list-group">
+        <form onsubmit="send()">
+            <label for="name">Name:</label><br>
+            <input type="text" name="name" id="name" style="margin: auto;"><br>
+            <label for="email">E-mail:</label><br>
+            <input type="email" name="email" id="email" style="margin:auto"required placeholder="example@email.com"><br>
+            <label for="number">Menge in Kg:</label><br>
+            <input type="number" name="number" id="number" style="margin:auto" required><br>
+            <p style="margin-top: 2em;">
+                Damenbekleidung:
+                <input type="checkbox" name="cloth1" id="K1" value="dress">
+                <label for="name">Kleider</label><br>
+                <input type="checkbox" name="cloth2" id="K2" value="skirt">
+                <label for="name">Röcke</label><br>
+                <input type="checkbox" name="cloth3" id="K3" value="shirt">
+                <label for="name">T-shirt/Top</label><br>
+                <input type="checkbox" name="cloth4" id="K4" value="jacket">
+                <label for="name">Jacken</label><br>
+                <input type="checkbox" name="cloth5" id="K5" value="pullover">
+                <label for="name">Pullovers</label><br>
+                <input type="checkbox" name="cloth6" id="K6" value="trousers">
+                <label for="name">Hosen</label><br>
+                <input type="checkbox" name="cloth7" id="K7" value="mix-up">
+                <label for="name">Socken und co.</label><br>
+                <input type="checkbox" name="cloth8" id="K8" value="shoes">
+                <label for="name">Schuhe</label><br>
+                <input type="checkbox" name="cloth9" id="K9" value="winter-mix">
+                <label for="name">Warme Wintersachen</label><br>
+            </p>
+            <p style="margin-top: 2em;">
+                Herrenbekleidung:
+                <input type="checkbox" name="cloth3" id="K3" value="shirt">
+                <label for="name">T-shirt/Top</label><br>
+                <input type="checkbox" name="cloth4" id="K4" value="jacket">
+                <label for="name">Jacken</label><br>
+                <input type="checkbox" name="cloth5" id="K5" value="pullover">
+                <label for="name">Pullovers</label><br>
+                <input type="checkbox" name="cloth6" id="K6" value="trousers">
+                <label for="name">Hosen</label><br>
+                <input type="checkbox" name="cloth7" id="K7" value="mix-up">
+                <label for="name">Socken und co.</label><br>
+                <input type="checkbox" name="cloth8" id="K8" value="shoes">
+                <label for="name">Schuhe</label><br>
+                <input type="checkbox" name="cloth9" id="K9" value="winter-mix">
+                <label for="name">Warme Wintersachen</label><br>
+            </p>
+            <label style="margin: auto;">Kriesengebiete:
+                <select name="top5[]" size="1" style="margin: auto;">
+                    <option value="01">Urkraine</option>
+                    <option value="02">Somalia</option>
+                    <option value="03">Uganda</option>
+                    <option value="04">Indonesien</option>
+                    <option value="05">Chile</option>
+                </select>
+            </label><br>
+            <button type="submit" name="senden" value="Submit" style="background-color: dodgerblue; margin-top: 2em;">Jetzt versenden!</button>
+        </form>
+    </section>
+</div>
+</main>
+   <footer class="d-flex justify-content-end py-3 my-4 border-top">
+        <ul class="nav">
+           <li class="nav-item"><a class="nav-link" href="privacy.html">Datenschutz</a></li>
+           <li class="nav-item"><a class="nav-link" href="imprint.html">Impressum</a></li>
+        </ul>
+   </footer>
+</body>
+</html>
