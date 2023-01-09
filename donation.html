@@ -4,7 +4,12 @@
     <title>Spenden</title>
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <style>
+        a:hover {
+            background-color: aqua;
+        }
+    </style>
 </head>
 <body style="background: aqua;">
     <header class="d-flex justify-content-end py-3">
@@ -21,14 +26,14 @@
  </header>
    <main class="d-flex">
     <nav class="d-flex flex-shrink-0 p-2" style="width: 200px; font-size: larger;">
-        <ul class="nav mb-auto" style="background: dodgerblue;">
+        <ul class="nav mb-auto" style="background: dodgerblue;" >
             <li class="nav-item"><a class="nav-link text-dark" href="index.html">Homepage</a></li>
             <li class="nav-item"><a class="nav-link text-dark" href="donation.html">Spenden</a></li>
             <li class="nav-item"><a class="nav-link text-dark" href="about.html">Über uns </a></li>
         </ul>
     </nav>
     <div class="me-3">
-    <section class="list-group">
+    <section class="list-group" >
         <h1 class="list-group-item mb-0" style="background: royalblue;">Hier können Sie spenden!</h1>
         <p class="list-group-item" style="background: cornflowerblue;">
             Sie entscheiden wo ihre spende hin soll.
@@ -39,32 +44,18 @@
         <p class="list-group-item" style="background: cornflowerblue;">
             Gerne können Sie ihre spende bei uns vor ort abgeben.
         </p>
-#        <button style="background: dodgerblue;">Spenden vor Ort</button>
-        <div class="donation-asap" id="donation-asap">
-            <div class="donation-header">
-                <div class="title">Vor Ort Spenden</div>
-                <button class="close button">&times;</button>
-            </div>
-            <div class="donation-body">
-                //hier müssen die daten und wahlmöglichkeiten hin
-            </div>
-        </div>
+        <p>
+            <button class="nav-item" style="background: dodgerblue;" href="give-away.html">Spenden vor Ort</button>
+        </p>
     </section>
     <section class="list-group">
         <h2 class="list-group-item mb-0" style="background: royalblue;"> Spende abholen lassen</h2>
         <p class="list-group-item" style="background: cornflowerblue;">
            Wir holen gerne ihre Spende ab
         </p>
-        <button style="background: dodgerblue;">Spende abholen lassen</button>
-        <div class="donation-later" id="donation-later">
-            <div class="donation-header">
-                <div class="title">Spende Abholen lassen!</div>
-                <button class="close button">&times;</button>
-            </div>
-            <div class="donation-body">
-                //hier müssen die daten und wahlmöglichkeiten hin
-            </div>
-        </div>
+        <p>
+        <button style="background: dodgerblue;" href="take-away.html">Spende abholen lassen</button>
+        </p>
     </section>
 </div>
 </main>
