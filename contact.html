@@ -5,6 +5,11 @@
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        function send() {
+            alert("Nachricht wurde gesendet!")
+        }
+    </script>
 </head>
 <body style="background: aqua;">
     <header class="d-flex justify-content-end py-3">
@@ -49,14 +54,14 @@
             Sie können uns jederzeit eine Mail schreiben und wir antworten Werktags innerhalb von 24 std. 
             Nutzen Sie hierfür das Kontaktformular.
         </p>
-        <form>
+        <form onsubmit="send()">
             <label for="name">Name:</label><br>
-            <input type="text" name="name" id="name"><br>
+            <input type="text" name="name" id="name" style="margin: auto;"><br>
             <label for="email">E-mail:</label><br>
-            <input type="email" name="email" id="email"required placeholder="example@email.com"><br>
+            <input type="email" name="email" id="email" style="margin:auto" required placeholder="example@email.com"><br>
             <label for="nachricht">Nachricht:</label><br>
-            <textarea name="nachricht" id="nachricht" required></textarea><br>
-            <button type="submit">Jetzt versenden!</button>
+            <textarea name="nachricht" id="nachricht" required style="margin: auto;"></textarea><br>
+            <button type="submit" name="senden" value="Submit">Jetzt versenden!</button>
         </form>
     </section>
 </div>
