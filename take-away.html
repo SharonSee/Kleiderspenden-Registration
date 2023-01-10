@@ -10,9 +10,19 @@
             background-color: aqua;
         }
     </style>
-    <script>
+    <script type="text/javascript">
         function send() {
-            alert("Nachricht wurde gesendet!")
+            alert("Registrierung war erfolgreich!")
+            print(ValidityState)
+        }
+        function validate(){
+            var a=document.getElementById("postcode").value;
+            var postcode= prompt("Du musst dich in unserem Einzugsgebiet befinden")
+            if(postcode<13000 && postcode>11999){
+                alert("Du befindest dich in unserem Einzugsgebiet")
+            } else{
+                alert("Du wohnst leider zu weit weg, wir können deine Spende nicht abholen")
+            }
         }
     </script>
 </head>
@@ -41,11 +51,13 @@
     <section class="list-group">
         <h1 class="list-group-item mb-0" style="background: royalblue;"> Registration zur Spenden Abholung </h1>
         <p class="list-group-item" style="background: cornflowerblue;">
-            Bitte geben Sie die erforderlichen Daten zur Registrierung ein.
+            Bitte geben Sie die erforderlichen Daten zur Registrierung ein. Prüfen sie zuerst ob ihre Postleitzahl in unserem Einzugsgebiet ist!
         </p>
+        <p id="Valid:"></p>
+            <button class="form-control" onclick="validate()" style="background-color: dodgerblue;">Check die Postleitzahl !!!</button><br>
     </section>
-    <section class="list-group">
-        <form onsubmit="send()">
+    <section class="list-group" style="background-color: aqua; margin-top: 2em;" onsubmit="send()">
+        <form  class="form-control" style="background-color: aqua;">
             <label for="name">Name:</label><br>
             <input type="text" name="name" id="name" style="margin: auto;"><br>
             <label for="email">E-mail:</label><br>
@@ -56,8 +68,12 @@
             <input type="time" name="time" id="time" style="margin: auto;" required placeholder="z.B. 15:30"><br>
             <label for="number">Menge in Kg:</label><br>
             <input type="number" name="number" id="number" style="margin:auto" required><br>
+            <label for="adress">Straße: </label><br>
+            <input type="adress" name="adress" id="adress" style="margin:auto" required placeholder="Musterstraße 12"><br>
+            <label for="postcode">Postleitzahl</label><br>
+            <input type="postcode" name="postcode" id="postcode" style="margin: auto;" lenght="5" min="12000" max="12999" required placeholder="12345">
             <p style="margin-top: 2em;">
-                Damenbekleidung:
+                Damenbekleidung:<br>
                 <input type="checkbox" name="cloth1" id="K1" value="dress">
                 <label for="name">Kleider</label><br>
                 <input type="checkbox" name="cloth2" id="K2" value="skirt">
@@ -78,20 +94,41 @@
                 <label for="name">Warme Wintersachen</label><br>
             </p>
             <p style="margin-top: 2em;">
-                Herrenbekleidung:
-                <input type="checkbox" name="cloth3" id="K3" value="shirt">
+                Herrenbekleidung: <br>
+                <input type="checkbox" name="cloth10" id="K10" value="shirt-men">
                 <label for="name">T-shirt/Top</label><br>
-                <input type="checkbox" name="cloth4" id="K4" value="jacket">
+                <input type="checkbox" name="cloth11" id="K11" value="jacket-men">
                 <label for="name">Jacken</label><br>
-                <input type="checkbox" name="cloth5" id="K5" value="pullover">
+                <input type="checkbox" name="cloth12" id="K12" value="pullover-men">
                 <label for="name">Pullovers</label><br>
-                <input type="checkbox" name="cloth6" id="K6" value="trousers">
+                <input type="checkbox" name="cloth13" id="K13" value="trousers-men">
                 <label for="name">Hosen</label><br>
-                <input type="checkbox" name="cloth7" id="K7" value="mix-up">
+                <input type="checkbox" name="cloth14" id="K14" value="mix-up-men">
                 <label for="name">Socken und co.</label><br>
-                <input type="checkbox" name="cloth8" id="K8" value="shoes">
+                <input type="checkbox" name="cloth15" id="K15" value="shoes-men">
                 <label for="name">Schuhe</label><br>
-                <input type="checkbox" name="cloth9" id="K9" value="winter-mix">
+                <input type="checkbox" name="cloth16" id="K16" value="winter-mix-men">
+                <label for="name">Warme Wintersachen</label><br>
+            </p>
+            <p style="margin-top: 2em;">
+                Kinderbekleidung: <br>
+                <input type="checkbox" name="cloth17" id="K17" value="dress-kids">
+                <label for="name">Kleider</label><br>
+                <input type="checkbox" name="cloth18" id="K18" value="skirt-kids">
+                <label for="name">Röcke</label><br>
+                <input type="checkbox" name="cloth19" id="K19" value="shirt-kids">
+                <label for="name">T-shirt/Top</label><br>
+                <input type="checkbox" name="cloth20" id="K20" value="jacket-kids">
+                <label for="name">Jacken</label><br>
+                <input type="checkbox" name="cloth21" id="K21" value="pullover-kids">
+                <label for="name">Pullovers</label><br>
+                <input type="checkbox" name="cloth22" id="K22" value="trousers-kids">
+                <label for="name">Hosen</label><br>
+                <input type="checkbox" name="cloth23" id="K23" value="mix-up-kids">
+                <label for="name">Socken und co.</label><br>
+                <input type="checkbox" name="cloth24" id="K24" value="shoes-kids">
+                <label for="name">Schuhe</label><br>
+                <input type="checkbox" name="cloth25" id="K25" value="winter-mix-kids">
                 <label for="name">Warme Wintersachen</label><br>
             </p>
             <label style="margin: auto; margin-top: 2em;">Kriesengebiete:
@@ -103,7 +140,7 @@
                     <option value="05">Chile</option>
                 </select>
             </label><br>
-            <button type="submit" name="senden" value="Submit" style="background-color: dodgerblue; margin-top: 2em;">Jetzt versenden!</button>
+            <button type="submit" name="senden" value="Submit" style="background-color: dodgerblue; margin-top: 2em;">Jetzt Registrieren!</button>
         </form>
     </section>
 </div>
