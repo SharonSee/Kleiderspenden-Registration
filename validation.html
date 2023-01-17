@@ -1,0 +1,158 @@
+<html>
+   <head>
+    <title>Registrierungs Bestätigung</title>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        a:hover {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body style="background: aqua;">
+    <img src="Bilder/Löwenmähnen.jpg" class="img-fluid" style="width: 250px; border-radius: 100%;">
+    <header class="d-flex justify-content-end py-3">
+    <nav>
+        <ul class="nav">
+            <li class="nav-item">
+                <form>
+                    <input type="search" class="form-control" name="suche" placeholder="Suche">
+                </form>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+        </ul>
+    </nav>
+ </header>
+   <main class="d-flex">
+    <nav class="d-flex flex-shrink-0 p-2" style="width: 200px; font-size: larger;">
+        <ul class="nav mb-auto" style="background: dodgerblue;">
+            <li class="nav-item"><a class="nav-link text-dark" href="index.html">Homepage</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="donation.html">Spenden</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="about.html">Über uns </a></li>
+        </ul>
+    </nav>
+    <div class="me-3">
+        <section class="list-group">
+            <h1 class="list-group-item mb-0" style="background: royalblue; margin-left: 12em;">Registrierung Erfolgreich</h1>
+        </section>
+        <section style="line-height: 200%; font-size: larger;">
+        <script>
+            var queryString = window.location.search;
+            var data = new URLSearchParams(queryString);
+
+    if (data.has("name")) {
+        document.write("Name: "+data.get("name")+"<br>");
+    }
+    if (data.has("email")) {
+        document.write("Email-Adresse: "+data.get("email")+"<br>");
+    }
+    if (data.has("date")) {
+        document.write("Datum der Abholung: "+data.get("date")+"<br>");
+    }
+    if (data.has("time")) {
+        document.write("Kann abgeholt werden ab: "+data.get("time")+"<br>");
+    }
+    if (data.has("number")) {
+        document.write("Menge in Kg: "+data.get("number")+"<br>");
+    }
+    if (data.has("criticPlace")) {
+        document.write("Kriesengebiet: "+data.get("criticPlace")+"<br>");
+    }
+    if (data.has("adress")) {
+        document.write("Adresse: "+data.get("adress")+"<br>");
+    }
+    if (data.has("postcode")) {
+        document.write("Postleitzahl: "+data.get("postcode")+"<br>");
+    }
+
+    if (data.has("DamenKleider")) {
+        document.write("Damen Kleider:   "+data.get("DamenKleider")+"<br>");
+    }
+    if (data.has("DamenRöcke")) {
+            document.write("Damen Röcke:  "+data.get("DamenRöcke")+"<br>");
+            }
+            if (data.has("DamenOberteile")) {
+            document.write("Damen Tops/Shirts: "+data.get("DamenOberteile")+"<br>");
+            }
+            if (data.has("DamenJacken")) {
+            document.write("Damen Jacken:  "+data.get("DamenJacken")+"<br>");
+            }
+            if (data.has("DamenPullover")) {
+            document.write("Damen Pullover:  "+data.get("DamenPullover")+"<br>");
+            }
+            if (data.has("DamenHosen")) {
+            document.write("Damen Hosen:  "+data.get("DamenHosen")+"<br>");
+            }
+            if (data.has("DamenKleinteile")) {
+            document.write("Damen Kleinteile:   "+data.get("DamenKleinteile")+"<br>");
+            }
+            if (data.has("DamenSchuhe")) {
+            document.write("Damen Schuhe:   "+data.get("DamenSchuhe")+"<br>");
+            }
+            if (data.has("DamenWinterbekleidung")) {
+            document.write("Damen Winterbekleidung:  "+data.get("DamenWinterbekleidung")+"<br>");
+            }
+            
+            if (data.has("HerrenOberteile")) {
+            document.write("Herren Tops/Shirts: "+data.get("HerrenOberteile")+"<br>");
+            }
+            if (data.has("HerrenJacken")) {
+            document.write("Herren Jacken: "+data.get("HerrenJacken")+"<br>");
+            }
+            if (data.has("HerrenPullover")) {
+            document.write("Herren Pullover: "+data.get("HerrenPullover")+"<br>");
+            }
+            if (data.has("HerrenHosen")) {
+            document.write("Herren Hosen: "+data.get("HerrenHosen")+"<br>");
+            }
+            if (data.has("HerrenKleinteile")) {
+            document.write("Herren Kleinteile: "+data.get("HerrenKleinteile")+"<br>");
+            }
+            if (data.has("HerrenSchuhe")) {
+            document.write("Herren Schuhe: "+data.get("HerrenSchuhe")+"<br>");
+            }
+            if (data.has("HerrenWinterbekleidung")) {
+            document.write("Herren Winterbekleidung: "+data.get("HerrenWinterbekleidung")+"<br>");
+            }
+
+            if (data.has("KinderKleider")) {
+            document.write("Kinder Kleider: "+data.get("KinderKleider")+"<br>");
+            }
+            if (data.has("KinderRöcke")) {
+            document.write("Kinder Röcke: "+data.get("KinderRöcke")+"<br>");
+            }
+            if (data.has("KinderOberteile")) {
+            document.write("Kinder Tops/Shirts: "+data.get("KinderOberteile")+"<br>");
+            }
+            if (data.has("KinderJacken")) {
+            document.write("Kinder Jacken: "+data.get("KinderJacken")+"<br>");
+            }
+            if (data.has("KinderPullover")) {
+            document.write("Kinder Pullover: "+data.get("KinderPullover")+"<br>");
+            }
+            if (data.has("KinderHosen")) {
+            document.write("Kinder Hosen: "+data.get("KinderHosen")+"<br>");
+            }
+            if (data.has("KinderKleinteile")) {
+            document.write("Kinder Kleinteile: "+data.get("KinderKleinteile")+"<br>");
+            }
+            if (data.has("KinderSchuhe")) {
+            document.write("Kinder Schuhe: "+data.get("KinderSchuhe")+"<br>");
+            }
+            if (data.has("KinderWinterbekleidung")) {
+            document.write("Kinder Winterbekleidung: "+data.get("KinderWinterbekleidung")+"<br>");
+            }
+
+          </script>
+        </section>
+ </main>
+<footer class="d-flex justify-content-end py-3 my-4 border-top">
+     <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="privacy.html">Datenschutz</a></li>
+        <li class="nav-item"><a class="nav-link" href="imprint.html">Impressum</a></li>
+     </ul>
+</footer>
+
+</body>
+</html>
