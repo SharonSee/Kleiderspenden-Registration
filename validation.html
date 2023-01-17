@@ -36,7 +36,7 @@
         <section class="list-group">
             <h1 class="list-group-item mb-0" style="background: royalblue; margin-left: 12em;">Registrierung Erfolgreich</h1>
         </section>
-        <section style="line-height: 200%; font-size: larger;">
+        <section style="line-height: 200%; font-size: larger; margin-left: 30em; margin-top: 2em;">
         <script>
             var queryString = window.location.search;
             var data = new URLSearchParams(queryString);
@@ -51,7 +51,7 @@
         document.write("Datum der Abholung: "+data.get("date")+"<br>");
     }
     if (data.has("time")) {
-        document.write("Kann abgeholt werden ab: "+data.get("time")+"<br>");
+        document.write("Kann abgeholt werden ab: "+data.get("time")+" Uhr"+"<br>");
     }
     if (data.has("number")) {
         document.write("Menge in Kg: "+data.get("number")+"<br>");
@@ -64,6 +64,9 @@
     }
     if (data.has("postcode")) {
         document.write("Postleitzahl: "+data.get("postcode")+"<br>");
+    }
+    if(data.has("city")){
+        document.write("Ort: "+data.get("city")+"<br>");
     }
 
     if (data.has("DamenKleider")) {
@@ -144,8 +147,18 @@
             document.write("Kinder Winterbekleidung: "+data.get("KinderWinterbekleidung")+"<br>");
             }
 
+            var submitDate = localStorage.getItem("submitDate");
+  var submitTime = localStorage.getItem("submitTime");
+  document.getElementById("submitDate").innerHTML = submitDate;
+  document.getElementById("submitTime").innerHTML = submitTime;
+           
           </script>
-        </section>
+          <div>
+            <p id="submitDate"></p>
+            <p id="submitTime"></p>
+          </div>
+        </section>   
+                
  </main>
 <footer class="d-flex justify-content-end py-3 my-4 border-top">
      <ul class="nav">

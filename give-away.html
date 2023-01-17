@@ -27,17 +27,25 @@
  </header>
  <script type="text/javascript">
 
+function getDateTime() {
+  var date = new Date();
+  var dateString = date.toLocaleDateString();
+  var timeString = date.toLocaleTimeString();
+  localStorage.setItem("submitDate", dateString);
+  localStorage.setItem("submitTime", timeString);
+}
+
     function submitForm() {
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
         var number = document.getElementById("number").value;
 
-        var DamenKleider = document.getElementById("DamenKleider").displayOptin();
-        var DamenRöcke = document.getElementById("DamenRöcke").displayOptin();
-        var DamenOberteile = document.getElementById("DamenOberteile").displayOptin();
-        var DamenJacken = document.getElementById("DamenJacken").displayOptin();
-        var DamenPullover = document.getElementById("DamenPullover").displayOptin();
-        var DamenHosen = document.getElementById("DamenHosen").displayOptin();
+        var DamenKleider = document.getElementById("DamenKleider").value;
+        var DamenRöcke = document.getElementById("DamenRöcke").value;
+        var DamenOberteile = document.getElementById("DamenOberteile").value;
+        var DamenJacken = document.getElementById("DamenJacken").value;
+        var DamenPullover = document.getElementById("DamenPullover").value;
+        var DamenHosen = document.getElementById("DamenHosen").value;
         var DamenKleinteile = document.getElementById("DamenKleinteile").value;
         var DamenSchuhe = document.getElementById("DamenSchuhe").value;
         var DamenWinterbekleidung = document.getElementById("DamenWinterbekleidung").value;
@@ -61,23 +69,14 @@
         var KinderWinterbekleidung = document.getElementById("KinderWinterbekleidung").value;
         var criticPlace = document.getElementById("criticPlace").value;
 
-        var serializedData = "name=" +name +"&email="+email+"&number"+number+"&DamenKleider"+DamenKleider+"&DamenRöcke"+DamenRöcke+"&DamenOberteile"+DamenOberteile+"&DamenJacken"+DamenJacken+"&DamenPullover"+DamenPullover+"&DamenHosen"+DamenHosen+"&DamenKleinteile"+DamenKleinteile+"&DamenSchuhe"+DamenSchuhe+"&DamenWinterbekleidung"+DamenWinterbekleidung+
+        var serializedData1 = "name=" +name +"&email="+email+"&number"+number+"&DamenKleider"+DamenKleider+"&DamenRöcke"+DamenRöcke+"&DamenOberteile"+DamenOberteile+"&DamenJacken"+DamenJacken+"&DamenPullover"+DamenPullover+"&DamenHosen"+DamenHosen+"&DamenKleinteile"+DamenKleinteile+"&DamenSchuhe"+DamenSchuhe+"&DamenWinterbekleidung"+DamenWinterbekleidung+
         "&HerrenOberteile"+HerrenOberteile+"&HerrenJacken"+HerrenJacken+"&HerrenPullover"+HerrenPullover+"&HerrenHosen"+HerrenHosen+"&HerrenKleinteile"+HerrenKleinteile+"&HerrenSchuhe"+HerrenSchuhe+"&HerrenWinterbekleidung"+HerrenWinterbekleidung+
         "&KinderKleider"+KinderKleider+"&KinderRöcke"+KinderRöcke+"&KinderOberteile"+KinderOberteile+"&KinderJacken"+KinderJacken+"&KinderPullover"+KinderPullover+"&KinderHosen"+KinderHosen+"&KinderKleinteile"+KinderKleinteile+"&KinderSchuhe"+KinderSchuhe+"&KinderWinterbekleidung"+KinderWinterbekleidung+
         "&criticPlace"+criticPlace;
 
-        window.location.href= "validation.html?"+serializedData;
+        window.location.href= "validation.html?"+serializedData1;
     }
-
-    function displayOption(checkbox){
-            var optionData = document.getElementById(checkbox.id +"-data");
-            if(checkbox.checked){
-                optionData.style.display ="block";
-            } else {
-                optionData.style.display = "none";
-            }
-               }
-
+       
 </script>
    <main class="d-flex">
     <nav class="d-flex flex-shrink-0 p-2" style="width: 200px; font-size: larger;">
@@ -95,96 +94,97 @@
         </p>
     </section>
         <section class="list-group">
-        <form name="formular" class="form-control" action="validation.html" style="background-color: aqua;">
+        <form name="formular" class="form-control" action="validation.html" method="post" onsubmit="getDateTime()" style="background-color: aqua;">
             <label for="name">Name:</label><br>
             <input type="text" name="name" id="name" style="margin: auto;"><br>
             <label for="email">E-mail:</label><br>
             <input type="email" name="email" id="email" style="margin:auto"required placeholder="example@email.com"><br>
             <label for="number">Menge in Kg:</label><br>
             <input type="number" name="number" id="number" style="margin:auto" required><br>
+
             <p style="margin-top: 2em;">
                 Damenbekleidung:<br>
-                <input type="checkbox" name="options" id="DamenKleider" onclick="displayOption(this)" value="yes">
+                <input type="checkbox" name="DamenKleider" id="DamenKleider" value="Ja">
                 <label for="name">Kleider</label><br>
-                <div id="DamenKleider-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="DamenRöcke" onclick="displayOption(this)">
+                
+                <input type="checkbox" name="DamenRöcke" id="DamenRöcke" value="Ja">
                 <label for="name">Röcke</label><br>
-                <div id="DamenRöcke-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="DamenOberteile" onclick="displayOption(this)">
+                
+                <input type="checkbox" name="DamenOberteile" id="DamenOberteile" value="Ja">
                 <label for="name">T-shirt/Top</label><br>
-                <div id="DamenOberteile-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="DamenJacken" onclick="displayOption(this)">
+               
+                <input type="checkbox" name="DamenJacken" id="DamenJacken" value="Ja">
                 <label for="name">Jacken</label><br>
-                <div id="DamenJacken-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="DamenPullover" onclick="displayOption(this)">
+                
+                <input type="checkbox" name="DamenPullover" id="DamenPullover" value="Ja">
                 <label for="name">Pullovers</label><br>
-                <div id="DamenPullover-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="DamenHosen" onclick="displayOption(this)">
+                
+                <input type="checkbox" name="DamenHosen" id="DamenHosen" value="Ja">
                 <label for="name">Hosen</label><br>
-                <div id="DamenHosen-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="DamenKleinteile" onclick="displayOption(this)">
+               
+                <input type="checkbox" name="DamenKleinteile" id="DamenKleinteile" value="Ja">
                 <label for="name">Socken und co.</label><br>
-                <div id="DamenKleinteile-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="DamenSchuhe" onclick="displayOption(this)">
+               
+                <input type="checkbox" name="DamenSchuhe" id="DamenSchuhe" value="Ja">
                 <label for="name">Schuhe</label><br>
-                <div id="DamenSchuhe-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="DamenWinterbekleidung" onclick="displayOption(this)">
+               
+                <input type="checkbox" name="DamenWinterbekleidung" id="DamenWinterbekleidung" value="Ja">
                 <label for="name">Warme Wintersachen</label><br>
-                <div id="DamenWinterbekleidung-data" style="display : none"></div>
+               
             </p>
             <p style="margin-top: 2em;">
                 Herrenbekleidung: <br>
-                <input type="checkbox" name="options" id="HerrenOberteile" onclick="displayOption(this)">
+                <input type="checkbox" name="HerrenOberteile" id="HerrenOberteile" value="Ja">
                 <label for="name">T-shirt/Top</label><br>
-                <div id="HerrenOberteile-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="HerrenJacken" onclick="displayOption(this)">
+                
+                <input type="checkbox" name="HerrenJacken" id="HerrenJacken" value="Ja">
                 <label for="name">Jacken</label><br>
-                <div id="HerrenJacken-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="HerrenPullover" onclick="displayOption(this)">
+                
+                <input type="checkbox" name="HerrenPullover" id="HerrenPullover" value="Ja">
                 <label for="name">Pullovers</label><br>
-                <div id="HerrenPullover-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="HerrenHosen" onclick="displayOption(this)">
+                
+                <input type="checkbox" name="HerrenHosen" id="HerrenHosen" value="Ja">
                 <label for="name">Hosen</label><br>
-                <div id="HerrenHosen-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="HerrenKleinteile" onclick="displayOption(this)">
+               
+                <input type="checkbox" name="HerrenKleinteile" id="HerrenKleinteile" value="Ja">
                 <label for="name">Socken und co.</label><br>
-                <div id="HerrenKleinteile-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="HerrenSchuhe" onclick="displayOption(this)">
+               
+                <input type="checkbox" name="HerrenSchuhe" id="HerrenSchuhe" value="Ja">
                 <label for="name">Schuhe</label><br>
-                <div id="HerrenSchuhe-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="HerrenWinterbekleidung" onclick="displayOption(this)">
+               
+                <input type="checkbox" name="HerrenWinterbekleidung" id="HerrenWinterbekleidung" value="Ja">
                 <label for="name">Warme Wintersachen</label><br>
-                <div id="HerrenWinterbekleidung-data" style="display : none"></div>
+                
             </p>
             <p style="margin-top: 2em;">
                 Kinderbekleidung: <br>
-                <input type="checkbox" name="options" id="KinderKleider" onclick="displayOption(this)">
+                <input type="checkbox" name="KinderKleider" id="KinderKleider" value="Ja">
                 <label for="name">Kleider</label><br>
-                <div id="KinderKleider-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="KinderRöcke" onclick="displayOption(this)">
+                
+                <input type="checkbox" name="KinderRöcke" id="KinderRöcke" value="Ja">
                 <label for="name">Röcke</label><br>
-                <div id="KinderRöcke-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="KinderOberteile" onclick="displayOptin(this)">
+                
+                <input type="checkbox" name="KinderOberteile" id="KinderOberteile" value="Ja">
                 <label for="name">T-shirt/Top</label><br>
-                <div id="KinderOberteile-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="KinderJacken" onclick="displayOption(this)">
+               
+                <input type="checkbox" name="KinderJacken" id="KinderJacken" value="Ja">
                 <label for="name">Jacken</label><br>
-                <div id="KinderJacken-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="KinderPullover" onclick="displayOption(this)">
+                
+                <input type="checkbox" name="KinderPullover" id="KinderPullover" value="Ja">
                 <label for="name">Pullovers</label><br>
-                <div id="KinderPullover-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="KinderHosen" onclick="displayOption(this)">
+                
+                <input type="checkbox" name="KinderHosen" id="KinderHosen" value="Ja">
                 <label for="name">Hosen</label><br>
-                <div id="KinderHosen-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="KinderKleinteile" onclick="displayOpton(this)">
+               
+                <input type="checkbox" name="KinderKleinteile" id="KinderKleinteile" value="Ja">
                 <label for="name">Socken und co.</label><br>
-                <div id="KinderKleinteile-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="KinderSchuhe" onclick="displayOptin(this)">
+               
+                <input type="checkbox" name="KinderSchuhe" id="KinderSchuhe" value="Ja">
                 <label for="name">Schuhe</label><br>
-                <div id="KinderSchuhe-data" style="display : none"></div>
-                <input type="checkbox" name="options" id="KinderWinterbekleidung" onclick="displayOption(this)">
+               
+                <input type="checkbox" name="KinderWinterbekleidung" id="KinderWinterbekleidung" value="Ja">
                 <label for="name">Warme Wintersachen</label><br>
-                <div id="KinderWinterbekleidung-data" style="display : none"></div>
+                
             </p>
             <label style="margin: auto;">Kriesengebiete:
                 <select name="criticPlace" id="criticPlace" size="1" style="margin: auto; margin-top: 2em;">
@@ -195,7 +195,8 @@
                     <option value="Chile">Chile</option>
                 </select>
             </label><br>
-            <input type="submit" value=" Jetzt Registrieren" onclick="displayOption(), submitForm()" style="margin-top: 2em;">
+            <input type="submit" value=" Jetzt Registrieren" onclick="submitForm(), getDateTime()" style="margin-top: 2em;">
+           
         </form>
     </section>
 </div>
