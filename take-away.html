@@ -69,6 +69,13 @@
             }
         }
 
+        function checkZip(){
+            var postcode = document.getElementById("postcode").value;
+            if(!postcode.startsWith("12")){
+                alert("Sie befinden sich nicht in unserem Einzugsgebiet!!!")
+            }
+        }
+
     </script>
 </head>
 <body style="background: aqua;">
@@ -117,7 +124,7 @@
             <label for="adress">Straße: </label><br>
             <input type="adress" name="adress" id="adress" style="margin:auto" required placeholder="Musterstraße 12"><br>
             <label for="postcode">Postleitzahl</label>
-            <input type="text" name="postcode" id="postcode" style="margin: auto;" inputmode="numeric" min="12000" max="12999"  required placeholder="12345">
+            <input type="text" name="postcode" id="postcode" style="margin: auto;" inputmode="numeric" onblur="checkZip()" pattern="[0-9]{5}"  required placeholder="12345">
             <label for="city"> Ort: </label>
             <input type="city" name="city" id="city" style="margin-top: 1em;" required>
 
