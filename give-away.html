@@ -27,14 +27,6 @@
  </header>
  <script type="text/javascript">
 
-function getDateTime() {
-  var date = new Date();
-  var dateString = date.toLocaleDateString();
-  var timeString = date.toLocaleTimeString();
-  localStorage.setItem("submitDate", dateString);
-  localStorage.setItem("submitTime", timeString);
-}
-
     function submitForm() {
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
@@ -69,12 +61,12 @@ function getDateTime() {
         var KinderWinterbekleidung = document.getElementById("KinderWinterbekleidung").value;
         var criticPlace = document.getElementById("criticPlace").value;
 
-        var serializedData1 = "name=" +name +"&email="+email+"&number"+number+"&DamenKleider"+DamenKleider+"&DamenRöcke"+DamenRöcke+"&DamenOberteile"+DamenOberteile+"&DamenJacken"+DamenJacken+"&DamenPullover"+DamenPullover+"&DamenHosen"+DamenHosen+"&DamenKleinteile"+DamenKleinteile+"&DamenSchuhe"+DamenSchuhe+"&DamenWinterbekleidung"+DamenWinterbekleidung+
+        var serializedData = "name=" +name +"&email="+email+"&number"+number+"&DamenKleider"+DamenKleider+"&DamenRöcke"+DamenRöcke+"&DamenOberteile"+DamenOberteile+"&DamenJacken"+DamenJacken+"&DamenPullover"+DamenPullover+"&DamenHosen"+DamenHosen+"&DamenKleinteile"+DamenKleinteile+"&DamenSchuhe"+DamenSchuhe+"&DamenWinterbekleidung"+DamenWinterbekleidung+
         "&HerrenOberteile"+HerrenOberteile+"&HerrenJacken"+HerrenJacken+"&HerrenPullover"+HerrenPullover+"&HerrenHosen"+HerrenHosen+"&HerrenKleinteile"+HerrenKleinteile+"&HerrenSchuhe"+HerrenSchuhe+"&HerrenWinterbekleidung"+HerrenWinterbekleidung+
         "&KinderKleider"+KinderKleider+"&KinderRöcke"+KinderRöcke+"&KinderOberteile"+KinderOberteile+"&KinderJacken"+KinderJacken+"&KinderPullover"+KinderPullover+"&KinderHosen"+KinderHosen+"&KinderKleinteile"+KinderKleinteile+"&KinderSchuhe"+KinderSchuhe+"&KinderWinterbekleidung"+KinderWinterbekleidung+
         "&criticPlace"+criticPlace;
 
-        window.location.href= "validation.html?"+serializedData1;
+        window.location.href= "validation.html?"+serializedData;
     }
        
 </script>
@@ -94,7 +86,7 @@ function getDateTime() {
         </p>
     </section>
         <section class="list-group">
-        <form name="formular" class="form-control" action="validation.html" method="post" onsubmit="getDateTime()" style="background-color: aqua;">
+        <form name="formular" class="form-control" action="validation.html" style="background-color: aqua;">
             <label for="name">Name:</label><br>
             <input type="text" name="name" id="name" style="margin: auto;"><br>
             <label for="email">E-mail:</label><br>
@@ -195,7 +187,7 @@ function getDateTime() {
                     <option value="Chile">Chile</option>
                 </select>
             </label><br>
-            <input type="submit" value=" Jetzt Registrieren" onclick="submitForm(), getDateTime()" style="margin-top: 2em;">
+            <input type="submit" value=" Jetzt Registrieren" onclick="submitForm()" style="margin-top: 2em;">
            
         </form>
     </section>
